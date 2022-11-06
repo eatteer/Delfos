@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Delfos.Views.Login"
+             Title="Login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Username"></Label>
+            <Entry Text="{Binding Username, Mode=TwoWay}"></Entry>
+            <Label Text="Password"></Label>
+            <Entry Text="{Binding Password, Mode=TwoWay}"
+                   IsPassword="True">
+            </Entry>
+            <Button Text="Login"
+                    Command="{Binding LoginCommand}">
+            </Button>
+            <Label Text="Don't have an account? Register">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding NavigateToRegisterPageCommand}"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
