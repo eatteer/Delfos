@@ -4,10 +4,14 @@
              x:Class="Delfos.Views.Home"
              Title="Home">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Home"
-                   VerticalOptions="CenterAndExpand"
-                   HorizontalOptions="CenterAndExpand">
+        <StackLayout BackgroundColor="White">
+            <Label 
+                Text="Home"
+                TextColor="Black"
+                FontSize="48"
+                FontAttributes="Bold"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand">
             </Label>
         </StackLayout>
     </ContentPage.Content>

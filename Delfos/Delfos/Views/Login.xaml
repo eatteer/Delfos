@@ -4,21 +4,71 @@
              x:Class="Delfos.Views.Login"
              Title="Login">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Username"></Label>
-            <Entry Text="{Binding Username, Mode=TwoWay}"></Entry>
-            <Label Text="Password"></Label>
-            <Entry Text="{Binding Password, Mode=TwoWay}"
-                   IsPassword="True">
-            </Entry>
-            <Button Text="Login"
-                    Command="{Binding LoginCommand}">
-            </Button>
-            <Label Text="Don't have an account? Register">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding NavigateToRegisterPageCommand}"></TapGestureRecognizer>
-                </Label.GestureRecognizers>
-            </Label>
+        <StackLayout BackgroundColor="White">
+            <StackLayout  
+                BackgroundColor="White"
+                Padding="15, 15, 15, 15"
+                VerticalOptions="CenterAndExpand">
+
+
+                <Label 
+                    Text="Username/E-Mail" 
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+                <Frame
+                    BackgroundColor="Black"
+                    CornerRadius="10"
+                    Padding="3, 3, 3, 3">
+                    <Frame 
+                        Padding="0, 0, 0, 0"
+                        HasShadow="False"
+                        CornerRadius="8">
+                        <Entry 
+                            Text="{Binding Username, Mode=TwoWay}" 
+                            TextColor="Black"
+                            HorizontalOptions="FillAndExpand"/>
+                    </Frame>
+                </Frame>
+
+                <Label 
+                    Text="Password" 
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+                <Frame
+                    BackgroundColor="Black"
+                    CornerRadius="10"
+                    Padding="3, 3, 3, 3">
+                    <Frame 
+                        Padding="0, 0, 0, 0"
+                        HasShadow="False"
+                        CornerRadius="8">
+                        <Entry 
+                            Text="{Binding Password, Mode=TwoWay}"
+                            TextColor="Black"
+                            IsPassword="True"/>
+                    </Frame>
+                </Frame>
+
+                <Button 
+                    Text="Login"
+                    Command="{Binding LoginCommand}"
+                    BackgroundColor="Black"
+                    Margin="0, 15, 0, 0"
+                    FontSize="22"
+                    FontAttributes="Bold"
+                    CornerRadius="25"/>
+                <Label 
+                    Text="Don't have an account? Sign Up"
+                    TextColor="Black"
+                    TextDecorations="Underline"
+                    Margin="0, 5, 0, 0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding NavigateToRegisterPageCommand}"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

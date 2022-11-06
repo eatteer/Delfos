@@ -1,19 +1,111 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>    
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Delfos.Views.Register"
-             Title="Register">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Username"></Label>
-            <Entry Text="{Binding Username, Mode=TwoWay}"></Entry>
-            <Label Text="Password"></Label>
-            <Entry Text="{Binding Password, Mode=TwoWay}"
-                   IsPassword="True">
-            </Entry>
-            <Button Text="Register"
-                    Command="{Binding RegisterCommand}">
-            </Button>
+             Title="Sign Up">
+    <ContentPage.Content>        
+        
+        <StackLayout BackgroundColor="White">
+
+            <StackLayout
+                BackgroundColor="White"
+                Padding="15, 15, 15, 15"
+                VerticalOptions="CenterAndExpand">
+
+                <Label 
+                    Text="Username"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+                <Frame
+                    BackgroundColor="Black"
+                    CornerRadius="10"
+                    Padding="3, 3, 3, 3">
+                    <Frame
+                        Padding="0, 0, 0, 0"
+                        HasShadow="False"
+                        CornerRadius="8">
+                        <Entry 
+                            Text="{Binding Username, Mode=TwoWay}"
+                            TextColor="Black"
+                            HorizontalOptions="FillAndExpand"/>
+                    </Frame>
+                </Frame>
+
+
+                <Label 
+                    Text="E-Mail"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+                <Frame
+                    BackgroundColor="Black"
+                    CornerRadius="10"
+                    Padding="3, 3, 3, 3">
+                    <Frame
+                        Padding="0, 0, 0, 0"
+                        HasShadow="False"
+                        CornerRadius="8">
+                        <Entry 
+                            Text="{Binding Email, Mode=TwoWay}"
+                            TextColor="Black"
+                            HorizontalOptions="FillAndExpand"/>
+                    </Frame>
+                </Frame>
+
+                <Label 
+                    Text="Password"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+                <Frame
+                    BackgroundColor="Black"
+                    CornerRadius="10"
+                    Padding="3, 3, 3, 3">
+                    <Frame
+                        Padding="0, 0, 0, 0"
+                        HasShadow="False"
+                        CornerRadius="8">
+                        <Entry 
+                            Text="{Binding Password, Mode=TwoWay}"
+                            IsPassword="True"
+                            TextColor="Black"
+                            HorizontalOptions="FillAndExpand"/>
+                    </Frame>
+                </Frame>
+
+                <Label 
+                    Text="Repeat Password"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+                <Frame
+                    BackgroundColor="Black"
+                    CornerRadius="10"
+                    Padding="3, 3, 3, 3">
+                    <Frame
+                        Padding="0, 0, 0, 0"
+                        HasShadow="False"
+                        CornerRadius="8">
+                        <Entry 
+                            Text="{Binding RepeatPwd, Mode=TwoWay}"
+                            IsPassword="True"
+                            TextColor="Black"
+                            HorizontalOptions="FillAndExpand"/>
+                    </Frame>
+                </Frame>
+
+                <Button 
+                    Text="Register"
+                    Command="{Binding RegisterCommand}"
+                    BackgroundColor="Black"
+                    Margin="0, 15, 0, 0"
+                    FontSize="22"
+                    FontAttributes="Bold"
+                    CornerRadius="25">
+                </Button>
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

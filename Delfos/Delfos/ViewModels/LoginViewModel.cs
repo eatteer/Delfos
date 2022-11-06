@@ -66,7 +66,7 @@ namespace Delfos.ViewModels
                 return;
             }
 
-            string query = $"SELECT * FROM User WHERE username = '{Username}' AND password = '{Password}'";
+            string query = $"SELECT * FROM User WHERE (username = '{Username}' OR email = '{Username}') AND password = '{Password}'";
             var foundUsers = await App.Database.getConnection().QueryAsync<User>(query);
 
             if (foundUsers.Count == 0)
@@ -74,6 +74,8 @@ namespace Delfos.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Error", "Username or password do not match", "Ok");
                 return;
             }
+
+            await Application.Current.MainPage.DisplayAlert("Login", "Successful Login", "Ok");
 
             // https://stackoverflow.com/questions/46987449/keep-user-logged-into-xamarin-forms-app-unless-log-out-is-clicked
             // Application.Current.Properties["username"] = foundUsers[0].Username;

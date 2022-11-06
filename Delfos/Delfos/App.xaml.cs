@@ -20,7 +20,7 @@ namespace Delfos
                 {
                     string databasePath = Path.Combine(
                         Environment.GetFolderPath(
-                            Environment.SpecialFolder.LocalApplicationData), "database.db");
+                            Environment.SpecialFolder.LocalApplicationData), "xamarinDB.db");
                     Debug.WriteLine(databasePath);
                     database = new DB(databasePath);
                 }
