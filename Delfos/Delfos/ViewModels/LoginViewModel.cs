@@ -76,7 +76,8 @@ namespace Delfos.ViewModels
             }
 
             // https://stackoverflow.com/questions/46987449/keep-user-logged-into-xamarin-forms-app-unless-log-out-is-clicked
-            // Application.Current.Properties["username"] = foundUsers[0].Username;
+            Application.Current.Properties["username"] = foundUsers[0].Username;
+            Application.Current.Properties["userId"] = foundUsers[0].Id;
 
             // Insert home page before login page, then remove login from stack, so user cannot
             // go back to login page

@@ -11,12 +11,12 @@ using Delfos.ViewModels;
 namespace Delfos.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Home : ContentPage
+    public partial class NoteCreation : ContentPage
     {
-        public Home()
+        public NoteCreation()
         {
             InitializeComponent();
-            BindingContext = new HomeViewModel();
+            BindingContext = new NoteCreationViewModel();
         }
     }
 }

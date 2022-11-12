@@ -14,6 +14,7 @@ namespace Delfos.Database
         {
             connection = new SQLiteAsyncConnection(databasePath);
             connection.CreateTableAsync<User>().Wait();
+            connection.CreateTableAsync<Note>().Wait();
         }
 
         public SQLiteAsyncConnection getConnection()

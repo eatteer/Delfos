@@ -6,15 +6,15 @@ using SQLiteNetExtensions.Attributes;
 
 namespace Delfos.Models
 {
-    public class User
+    public class Note
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
-        [Unique, MaxLength(50)]
-        public string Username { get; set; }
+        [MaxLength(50)]
+        public string Title { get; set; }
         [MaxLength(255)]
-        public string Password { get; set; }
-        [OneToMany]
-        public List<Note> Notes { get; set; }
+        public string Description { get; set; }
+        [ForeignKey(typeof(User))]
+        public int UserId { get; set; }
     }
 }

@@ -75,7 +75,7 @@ namespace Delfos.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Error", "User could not be registered", "Ok");
                 return;
             }
-
+                
             await Application.Current.MainPage.DisplayAlert("Success", "User successfully registered", "Ok");
             await Application.Current.MainPage.Navigation.PopAsync();
         }
