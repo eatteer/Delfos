@@ -3,24 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Delfos.Views.Login"
              Visual="Material"
-             Title="Login">
+             NavigationPage.HasNavigationBar="True"
+             BackgroundColor="{StaticResource Background}">
     <ContentPage.Content>
-        <StackLayout>
-            <Entry Text="{Binding Username, Mode=TwoWay}"
-                   Placeholder="Username">
-            </Entry>
-            <Entry Text="{Binding Password, Mode=TwoWay}"
-                   Placeholder="Password"
-                   IsPassword="True">
-            </Entry>
-            <Button Text="Login"
-                    Command="{Binding LoginCommand}">
-            </Button>
-            <Label Text="Don't have an account? Register">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding NavigateToRegisterPageCommand}"></TapGestureRecognizer>
-                </Label.GestureRecognizers>
-            </Label>
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     Padding="16">
+            <Frame BackgroundColor="{StaticResource Secondary}"
+                   Padding="16">
+                <StackLayout>
+                    <Label Text="Delfos"
+                           FontSize="32"
+                           FontFamily="PoppinsBold"
+                           HorizontalTextAlignment="Center">
+                    </Label>
+                    <Entry Text="{Binding Username, Mode=TwoWay}"
+                           Placeholder="Username">
+                    </Entry>
+                    <Entry Text="{Binding Password, Mode=TwoWay}"
+                           Placeholder="Password"
+                           IsPassword="True"
+                           Margin="0,0,0,32">
+                    </Entry>
+                    <Button Text="Login"
+                            Margin="0,0,0,32"
+                            Command="{Binding LoginCommand}">
+                    </Button>
+                    <Label Text="Don't have an account? Register"
+                           FontFamily="PoppinsBold"
+                           HorizontalTextAlignment="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NavigateToRegisterPageCommand}"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

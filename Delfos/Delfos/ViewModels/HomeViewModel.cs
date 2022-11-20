@@ -39,7 +39,7 @@ namespace Delfos.ViewModels
             await Application.Current.MainPage.Navigation.PushAsync(new NoteCreation());
         }
 
-        private async void LoadNotes()
+        public async void LoadNotes()
         {
             int userId = (int)Application.Current.Properties["userId"];
             string query = $"SELECT * FROM Note WHERE userId = {userId}";

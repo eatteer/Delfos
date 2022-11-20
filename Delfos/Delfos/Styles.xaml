@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Color x:Key="Primary">#3F7EE8</Color>
+    <Color x:Key="Secondary">#FFFFFF</Color>
+    <Color x:Key="Background">#F3F3F3</Color>
+    <Color x:Key="Text">#2C2C2E</Color>
+    <Color x:Key="Danger">#e63946</Color>
+
+    <Style TargetType="Label">
+        <Setter Property="TextColor"
+                Value="{StaticResource Text}">
+        </Setter>
+        <Setter Property="FontFamily"
+                Value="Poppins">
+        </Setter>
+    </Style>
+
+    <Style TargetType="Button">
+        <Setter Property="BackgroundColor"
+                Value="{StaticResource Primary}">
+        </Setter>
+        <Setter Property="FontFamily"
+                Value="PoppinsBold">
+        </Setter>
+    </Style>
+
+    <Style TargetType="Entry">
+        <Setter Property="BackgroundColor"
+                Value="{StaticResource Secondary}">
+        </Setter>
+        <Setter Property="TextColor"
+                Value="{StaticResource Text}">
+        </Setter>
+        <Setter Property="PlaceholderColor"
+                Value="{StaticResource Text}">
+        </Setter>
+        <Setter Property="FontFamily"
+                Value="PoppinsRegular">
+        </Setter>
+    </Style>
+
+    <Style TargetType="Editor">
+        <Setter Property="BackgroundColor"
+                Value="{StaticResource Secondary}">
+        </Setter>
+        <Setter Property="TextColor"
+                Value="{StaticResource Text}">
+        </Setter>
+        <Setter Property="PlaceholderColor"
+                Value="{StaticResource Text}">
+        </Setter>
+        <Setter Property="FontFamily"
+                Value="PoppinsRegular">
+        </Setter>
+    </Style>
+
+    <Style TargetType="NavigationPage">
+        <Setter Property="BarBackgroundColor"
+                Value="{StaticResource Primary}">
+        </Setter>
+    </Style>
+
+    <Style TargetType="Frame">
+        <Setter Property="HasShadow"
+                Value="False"></Setter>
+    </Style>
+</ResourceDictionary>

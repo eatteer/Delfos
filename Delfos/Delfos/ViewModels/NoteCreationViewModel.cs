@@ -70,6 +70,7 @@ namespace Delfos.ViewModels
             }
 
             await Application.Current.MainPage.DisplayAlert("Success", "Note successfully created", "Ok");
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
         #endregion
     }

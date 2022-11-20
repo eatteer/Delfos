@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Delfos.Views.NoteCreation"
-             NavigationPage.HasNavigationBar="True"
+             x:Class="Delfos.Views.NoteEdition"
              Visual="Material"
              BackgroundColor="{StaticResource Background}">
     <ContentPage.Content>
@@ -10,14 +9,13 @@
             <Frame VerticalOptions="FillAndExpand"
                    Margin="0,0,0,8">
                 <StackLayout>
-                    <Label Text="Note creation"
+                    <Label Text="Note edition"
                            FontSize="32"
                            FontFamily="PoppinsBold"
                            HorizontalTextAlignment="Center">
                     </Label>
                     <Entry Text="{Binding Title, Mode=TwoWay}"
                            Placeholder="Title">
-
                     </Entry>
                     <Editor Text="{Binding Description, Mode=TwoWay}"
                             Placeholder="Description"
@@ -25,9 +23,15 @@
                     </Editor>
                 </StackLayout>
             </Frame>
-            <Button Text="Create"
-                    Command="{Binding CreateNoteCommand}">
-            </Button>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Save"
+                        HorizontalOptions="FillAndExpand"
+                        Command="{Binding UpdateNoteCommand}">
+                </Button>
+                <Button Text="Cancel"
+                        HorizontalOptions="FillAndExpand"
+                        Command="{Binding NavigateBackCommand}"></Button>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

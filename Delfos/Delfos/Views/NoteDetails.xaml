@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Delfos.Views.NoteDetails"
+             Visual="Material"
+             NavigationPage.HasNavigationBar="True"
+             BackgroundColor="{StaticResource Background}">
+    <ContentPage.Content>
+        <StackLayout Padding="16">
+            <Frame VerticalOptions="FillAndExpand"
+                   Margin="0,0,0,8">
+                <StackLayout VerticalOptions="FillAndExpand">
+                    <Label Text="{Binding Title}"
+                           FontSize="32"
+                           FontFamily="PoppinsBold" />
+                    <Label Text="{Binding Description}" />
+                </StackLayout>
+            </Frame>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Edit"
+                        x:Name="Edit"
+                        Clicked="Edit_Clicked"
+                        HorizontalOptions="FillAndExpand">
+                </Button>
+                <Button Text="Delete"
+                        BackgroundColor="{StaticResource Danger}"
+                        Command="{Binding DeleteNoteCommand}"
+                        HorizontalOptions="FillAndExpand">
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

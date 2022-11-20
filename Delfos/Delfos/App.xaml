@@ -3,6 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Delfos.App">
     <Application.Resources>
-
+        <ResourceDictionary Source="Styles.xaml"></ResourceDictionary>
     </Application.Resources>
 </Application>
