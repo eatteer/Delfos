@@ -20,19 +20,19 @@ namespace Delfos.ViewModels
         #region Properties
         public string Username
         {
-            get { return username; }
+            get { return username.Trim(); }
             set
             {
-                this.username.Trim();
+                value.Trim();
                 SetValue(ref this.username, value);
             }
         }
         public string Password
         {
-            get { return password; }
+            get { return password.Trim(); }
             set
             {
-                this.password.Trim();
+                value.Trim();
                 SetValue(ref this.password, value);
             }
         }
@@ -75,7 +75,7 @@ namespace Delfos.ViewModels
                 await Application.Current.MainPage.DisplayAlert("Error", "User could not be registered", "Ok");
                 return;
             }
-                
+
             await Application.Current.MainPage.DisplayAlert("Success", "User successfully registered", "Ok");
             await Application.Current.MainPage.Navigation.PopAsync();
         }

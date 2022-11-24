@@ -21,19 +21,19 @@ namespace Delfos.ViewModels
         #region Properties
         public string Username
         {
-            get { return username; }
+            get { return username.Trim(); }
             set
             {
-                this.username.Trim();
+                value.Trim();
                 SetValue(ref this.username, value);
             }
         }
         public string Password
         {
-            get { return password; }
+            get { return password.Trim(); }
             set
             {
-                this.password.Trim();
+                value.Trim();
                 SetValue(ref this.password, value);
             }
         }
@@ -76,6 +76,7 @@ namespace Delfos.ViewModels
             }
 
             // https://stackoverflow.com/questions/46987449/keep-user-logged-into-xamarin-forms-app-unless-log-out-is-clicked
+            Application.Current.Properties["isAuthenticated"] = true;
             Application.Current.Properties["username"] = foundUsers[0].Username;
             Application.Current.Properties["userId"] = foundUsers[0].Id;
 

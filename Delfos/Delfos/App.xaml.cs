@@ -31,11 +31,17 @@ namespace Delfos
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new Login());
+            bool isLoggedIn = Current.Properties.ContainsKey("isAuthenticated")
+                ? Convert.ToBoolean(Current.Properties["isAuthenticated"])
+                : false;
+            MainPage = isLoggedIn
+                ? new NavigationPage(new Home())
+                : new NavigationPage(new Login());
         }
 
         protected override void OnStart()
         {
+
         }
 
         protected override void OnSleep()

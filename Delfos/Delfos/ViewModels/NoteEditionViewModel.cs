@@ -30,20 +30,20 @@ namespace Delfos.ViewModels
 
         public string Title
         {
-            get { return title; }
+            get { return title.Trim(); }
             set
             {
-                this.title.Trim();
+                value.Trim();
                 SetValue(ref this.title, value);
             }
         }
 
         public string Description
         {
-            get { return description; }
+            get { return description.Trim(); }
             set
             {
-                this.description.Trim();
+                value.Trim();
                 SetValue(ref this.description, value);
             }
         }

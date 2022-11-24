@@ -7,6 +7,11 @@
              BackgroundColor="{StaticResource Background}">
     <ContentPage.Content>
         <StackLayout Padding="16">
+            <Button Text="Logout"
+                    BackgroundColor="{StaticResource Danger}"
+                    Margin="0,0,0,8"
+                    Command="{Binding LogoutCommand}">
+            </Button>
             <Frame BackgroundColor="{StaticResource Secondary}"
                    Padding="0"
                    Margin="0,0,0,8">
