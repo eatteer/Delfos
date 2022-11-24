@@ -20,7 +20,7 @@ namespace Delfos
                 {
                     string databasePath = Path.Combine(
                         Environment.GetFolderPath(
-                            Environment.SpecialFolder.LocalApplicationData), "database.db");
+                            Environment.SpecialFolder.LocalApplicationData), "db.db");
                     Debug.WriteLine(databasePath);
                     database = new DB(databasePath);
                 }
